@@ -7,7 +7,7 @@
   - turn starts with prompting user for num of stones to remove
   - tell user how many AI removed (random 1-3)
   - continue until there is a winner
-  -Thanks to Taylor Grant-Knightly.
+  -Thanks to Taylor Grant-Knightly for being a great teacher.
 */
 
 import java.io.*;
