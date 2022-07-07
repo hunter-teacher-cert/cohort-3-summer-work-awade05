@@ -4,7 +4,8 @@ import java.util.*;
 /**
  * Conway's Game of Life Team AreWeSentientYet?
  * Alicia Wade
- * collaborators: First Last, First Last
+ * worked with team, but did my own version:  Yenmin Young, Jerusha Theobald 
+ * 
  */
 
 /**
