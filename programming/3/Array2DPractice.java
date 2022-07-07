@@ -245,6 +245,14 @@ for(int i = 0; i < rows; i++){
   public static void downString( char[][] board, int row, int col, String word )
   {
     /* YOUR AWESOME CODE HERE */
+        int end = Math.min(board.length -       row,word.length());
+    
+    // Loop through rows starting at given row and
+    // using "end" as the end point
+      for (int i = 0; i < end; i++){
+      // Use .charAt(index) to use specific character
+      board[row + i][col] = word.charAt(i);
+    }
   }
 
 
@@ -253,7 +261,7 @@ for(int i = 0; i < rows; i++){
     
     char[][] b = buildBoard(5,10,'z');
     
-    explodeSquare(b,0,9);
+    explodeSquare(b,2,3);
     printBoard(b);
     explodeAllChar(b,'#');
     /*
