@@ -196,8 +196,8 @@ for(int i = 0; i < rows; i++){
     int cols = board[0].length;
     /* YOUR AWESOME CODE HERE */
       for(int i = 0; i < rows; i++){
-      for(int j =0; j < cols; j++){
-        if (board[i][j] == c){
+        for(int j =0; j < cols; j++){
+         if (board[i][j] == c){
           explodeSquare(board, i, j);
         }
         
@@ -255,6 +255,7 @@ for(int i = 0; i < rows; i++){
     
     explodeSquare(b,0,9);
     printBoard(b);
+    explodeAllChar(b,'#');
     /*
       Note, you can directly set elements in the board
       using array notation like b[3][2]='z' and you
