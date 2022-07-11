@@ -1,8 +1,8 @@
 /**
  * Recursive String Reverser by Team Palindromotosis
- * Kate Maschmeyer
- * collaborators:
  * Alicia Wade
+ * collaborators:
+ * Kate Maschmeyer
  * Marieke Thomas
  * Moo Joon Park
  */
