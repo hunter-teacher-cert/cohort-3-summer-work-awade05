@@ -5,7 +5,7 @@ public class SuperArrayDriver
 {
   public static void main( String[] args )
   {
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   
     System.out.println("Testing default constructor.");
     SuperArray sa = new SuperArray();
 
@@ -43,8 +43,19 @@ public class SuperArrayDriver
 
     sa.remove(15);
     System.out.println(sa);
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
+    
+    sa = new SuperArray(1);
+    System.out.println(sa.debug());
+    // sa.grow(); // tested, back to private
+    // System.out.println(sa.debug());
+    sa.add(5);
+    sa.add(2);
+    sa.add(27);
+    sa.add(42);
+    System.out.println(sa.debug());
+    System.out.println(sa);
+    sa.remove(1);
+    System.out.println(sa);
   }//main
 
 }//class SuperArrayDriver

@@ -1,7 +1,7 @@
 /**
  * SuperArray by Team MarvelvsDC
- * First Last
- * collaborators: First Last, First Last
+ * Alicia Wade
+ * collaborators: Wayne Tobias, William LaMorie
  */
 
 /**
@@ -16,6 +16,11 @@
    - dynamic capacity
    - auto-grow capacity if necessary
 */
+
+
+
+
+
 
 import java.io.*;
 import java.util.*;
@@ -71,14 +76,17 @@ public class SuperArray
        Implement the rest of this method first,
        then only write this section once the rest is tested and working.
     */
-    /* YOUR SIMPLE+SMART CODE HERE */
+    if(numberElements == data.length){ 
+      grow();
+    }
 
-    // add item
-    /* YOUR SIMPLE+SMART CODE HERE */
+    // add item  // with out the stuff above, it assumes there is room on the array
+    // data & numberElements 
+    data[numberElements] = value;
 
 
     // increment numberElements
-    /* YOUR SIMPLE+SMART CODE HERE */
+    numberElements ++;
 
   }//end add()
 
@@ -88,25 +96,35 @@ public class SuperArray
     //return whether this SuperArray instance is empty
     // in a modern language:
     // return bool(numberElements);
+    // as seen in class the following code could be replaced with one line
+    // return numberElements == 0; // this will return true or false
     if (numberElements == 0){
-    return true;
+      return true;
     }
     return false;
-    
   }
 
 
   public int get(int index)
   {
     //return item at index
-    /* YOUR SIMPLE+SMART CODE HERE */
+    // we can't do indexing like data[5] because the array is hidden in the super
+    // array  {Superarray {array {5} } }    
+    
+    return data[index]; //ph
   }
 
 
   public String toString()
   {
     //return stringified version of this Object
-    /* YOUR SIMPLE+SMART CODE HERE */
+
+    String s = "";
+    for(int i = 0; i < numberElements; i++){
+      if (i >= 1 ){ s = s + ", " + data[i]; }
+      else { s = s + data[i]; }
+    }
+    return s; 
   }//end toString()
 
 
@@ -129,41 +147,61 @@ public class SuperArray
   public void remove(int index)
   {
     // shift items down to remove the item at index
-    /* YOUR SIMPLE+SMART CODE HERE */
+    /* For the most part so far we've done looping from the start of something to
+      the end of it, this time we need to do looping differently than that.
+        start at that index value, 
+        move index + 1 -> index
+        continue to index + 1
+        replace that with index +1 +1, ect... 
+        stop at numberElements - 1
+    */
 
+    
     // subtract fom numElements;
     /* YOUR SIMPLE+SMART CODE HERE */
+    for (int i = index; i < numberElements -1; i++){
+      data[i] = data[i+1];
+      
+    }
+    numberElements --;
   }
 
 
   public void add(int index, int value)
   {
     // see if there's enough room
-    /* YOUR SIMPLE+SMART CODE HERE */
+    if(numberElements == data.length){ 
+      grow();
+    }
 
     // shift elements toward the end of the array
-    /* YOUR SIMPLE+SMART CODE HERE */
+    for (int i=numberElements - 1; i>=index; i--){
+      data[i+1] = data[i];
+    }
 
     // insert new element
-    /* YOUR SIMPLE+SMART CODE HERE */
+    data[index] = value;
 
     // increment numElements
-    /* YOUR SIMPLE+SMART CODE HERE */
+    numberElements ++;
   }
 
 
   private void grow()
   {
     // create a new array with extra space
-    // Q: How did you decide how much to increase capacity by?
-    /* YOUR SIMPLE+SMART CODE HERE */
-
+    // make a new array 1 bigger
+    int[] copy = new int[data.length + 1];
+      
     // copy over all the elements from the old array to the new one
-    /* YOUR SIMPLE+SMART CODE HERE */
+    for(int i = 0; i < data.length; i++){
+      copy[i] = data[i];
+    }
 
     // point data to the new array
     // Q: How does this look when illustrated using encapsulation diagram?
     /* YOUR SIMPLE+SMART CODE HERE */
+    data = copy;
   }//end grow()
 
 }//end class
