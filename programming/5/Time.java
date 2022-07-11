@@ -4,9 +4,9 @@ import java.util.*;
 
 /**
  * Time class by Team LucidThinkeren
-  * Kate Maschmeyer
+  * Alicia Wade
  * collaborators:
- * Alicia Wade
+ * Kate Maschmeyer
  * Marieke Thomas
  * Moo Joon Park
  */
