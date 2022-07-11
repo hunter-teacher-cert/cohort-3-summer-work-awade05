@@ -1,7 +1,7 @@
   /**
  * nth Fibonacci number generator by Team SumEmIfYaGotEm
- * Marieke Thomas
- * collaborators: Kate Maschmeyer, Alicia Wade, Moo Joon Park
+ * Alicia Wade
+ * collaborators: Kate Maschmeyer, Marieke Thomas, Moo Joon Park
  */
 
 public class Fib
