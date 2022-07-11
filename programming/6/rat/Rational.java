@@ -1,7 +1,7 @@
 /**
  * Rational class by Team BangPi
- * Wayne Tobias
- * collaborators: William L, Susie S, Alicia W
+ *Alicia Wade
+ * collaborators: William L, Susie S,  Wayne Tobias
  */
 
 
