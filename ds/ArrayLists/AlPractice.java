@@ -176,8 +176,8 @@ public static void main(String[] args) {
     System.out.println("al4" + al4);
 
     System.out.println("Testing sumOfLists");
-    ArrayList<Integer> al4 = sumOfLists(al3,al4);
-    System.out.println(al5);
+   // ArrayList<Integer> al4 = sumOfLists(al3,al4);
+    //System.out.println(al5);
   
     //Test adding both lists
    
