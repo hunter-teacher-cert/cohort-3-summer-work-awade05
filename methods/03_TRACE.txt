@@ -1,0 +1,59 @@
+Alicia Wade
+Team Sam L & Marike Thomas :: <roster>
+Methods - Summer 2022
+
+CODE TRACING in the classroom
+======================================
+
+
+PROS:
+---------------------------------------
+<general positive aspects of incorporating code or algorithm tracing into a CS course, from your perspective>
+
+- Helps to understand the code given
+- Help track where 
+- Visualize and get a feel for the code
+
+
+CONS:
+---------------------------------------
+<general negative aspects of incorporating code or algorithm tracing into a CS course, from your perspective>
+
+- Class time to implement in the course
+- 
+
+
+BEST FOR:
+---------------------------------------
+<types of activities from courses you teach or have taught that could benefit from an emphasis on tracing>
+
+- Iteration - Loops and recursion
+- Implementing new code 
+- Students are having problems with a paricular concept
+- Debugging and to figure out the Complex code output without the computer(solustions that cannot be readily solved in their heads)
+
+
+LEAST-SUITED TO:
+---------------------------------------
+<opposite of above -- and why>
+- Code that simple and does not include loops and lists
+
+
+PROVEN PRO-TIPS:
+---------------------------------------
+<
+ anything that has worked well for any member of your team, in the way of ...
+ * live tracing ("trace-along" a la livecoding)
+ * tracing as an assignment
+ * tools, physical/online/otherwise that make it easier/clearer
+ * etc 
+> 
+- Model how code tracing is done
+- Use colors and diagrams
+- Talking out the code first
+- Color coding each student or groups contribution
+- Maybe have printed paper with code already on it
+-
+
+
+

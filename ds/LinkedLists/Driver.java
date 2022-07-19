@@ -21,6 +21,10 @@ public class Driver{
     System.out.println("Lists that test remove: ");
     l.remove(3);
     System.out.println(l);
+     System.out.println("Test for 0 index: ");
+    l.add(5, "yes");//add
+    System.out.println(l);
+   
     
   }
 }
