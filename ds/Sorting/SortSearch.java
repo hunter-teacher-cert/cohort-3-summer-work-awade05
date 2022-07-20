@@ -98,7 +98,7 @@ public class SortSearch{
       for (int i = 0; i<this.data.size(); i++){
           smallestIndex = findSmallestIndex(i);
       
-      temp = this.get(smallestIndex);
+      temp = this.get(i);
       data.set(i, this.get(smallestIndex));
       data.set (smallestIndex,temp);
       }
@@ -121,7 +121,7 @@ public class SortSearch{
         return i;
       }
     }
-	  return -1; // replace this return
+	  return -1; 
     }
     
     /**
@@ -130,13 +130,27 @@ public class SortSearch{
        This algorithm only works on sorted ArrayLists.
     */
     public int binarySearch(int value){
-
 	// create assign variables  representing the high, low and middle indices 
+      int low = 0;
+      int high = data.size()- 1;
+      int mid;
 	// while we're not done:
 	//   if the item is at data.get(middle), return middle
 	//   otherwise, update high, low, and middle
+      while (low <= high){
+         mid = (low + (high - low)) / 2;
+        
+                
+        if(data.get(mid) == value)
+          return mid;
+        
+        if (data.get(mid) < value)
+          low = mid + 1;
+        else
+          high = mid -1;
+      }
 
-	return 0;
+	return -1;
 	    
     }
     
