@@ -28,12 +28,16 @@ public class SortSearchDriver {
   System.out.println("Testing linearSearch: ");
   System.out.println(ss);
   //System.out.println(ss.linearSearch(12));
-  System.out.println(ss.linearSearch(15));
+  System.out.println(ss.linearSearch(10));
+  System.out.println("");
+   //binary   
   System.out.println("Testing binarySearch: ");
   System.out.println(ss);
-  System.out.println(ss.binarySearch(10));   
-	// ss.linearSearch();
- //  System.out.println();
+  System.out.println(ss.binarySearch(12));  
+
+  //Recursive Search
+  System.out.println(i + " is at position: " + ss.binarySearchRecursive(i,0,19));
+  System.out.println("");
 	
 
 

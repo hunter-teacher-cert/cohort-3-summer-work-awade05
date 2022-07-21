@@ -1,0 +1,60 @@
+
+//arrays look just like variables at the start!
+var theColors;
+var randomNum;
+
+function setup() {
+  createCanvas(400, 400);
+
+  //note, arrays use the [] brackets to start and stop,
+  //with commas between each element.
+  theColors = [
+    "red",
+    "blue",
+    "green",
+    "orange",
+    color(85, 40, 133),
+    color(232, 12, 236),
+    color(255, 223, 70),
+    0,
+    255,
+  ];
+
+  //int ensures I have a whole number value instead of a decimal
+  //theColors.length takes the number of items in my array
+  randomNum = int(random(theColors.length));
+
+  console.log(theColors.length);
+  console.log(randomNum);
+}
+
+function draw() {
+  background(220);
+
+  //in this space, draw five shapes. each should have a different fill.
+  //you may ONLY use elements of theColors in your fill -
+  //like this: fill(theColors[0])
+
+  //if you finish early, try coloring stroke from array values
+  //then try adding your own values to the array!
+
+  //calls a random value from the array
+  fill(theColors[randomNum]);
+  ellipse(50, 50, 100);
+
+  fill(theColors[3]);
+  rect(100, 100, 100, 100);
+
+  fill(theColors[2]);
+  rect(300, 100, 50, 50);
+
+  fill(theColors[5]);
+  ellipse(250, 50, 100);
+  
+  fill(theColors[1]);
+  triangle(25, 75, 58, 20, 86, 75);
+  
+  fill(theColors[0]);
+  triangle(225, 75, 358, 20, 186, 75);
+  
+}
