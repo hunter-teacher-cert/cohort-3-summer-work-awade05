@@ -132,27 +132,23 @@ public class SortSearch{
     public int binarySearch(int value){
 	// create assign variables  representing the high, low and middle indices 
       int low = 0;
-      int high = data.size()- 1;
+      int high = data.size() - 1;
       int mid;
-	// while we're not done:
-	//   if the item is at data.get(middle), return middle
-	//   otherwise, update high, low, and middle
-      while (low <= high){
-         mid = (low + (high - low)) / 2;
-        
-                
-        if(data.get(mid) == value)
-          return mid;
-        
-        if (data.get(mid) < value)
-          low = mid + 1;
-        else
-          high = mid -1;
-      }
 
-	return -1;
-	    
-    }
+      while (high >= low){
+        mid = (low + high) / 2;
+        if (value < data.get(mid)){
+          high = mid - 1;
+        } 
+        else if (value > data.get(mid)){
+          low = mid + 1;
+        }
+        else
+      return mid;
+      }
+	 return -1;
+ 
+   }
     
     /**
        Implement a RECURSIVE binary search as specified by the comments
@@ -164,7 +160,29 @@ public class SortSearch{
 
 	// refer to class discussion
 	
-	return 0;
+
+        if (highIndex >= lowIndex) {
+            int mid = lowIndex + (highIndex - lowIndex) / 2;
+  
+            // If the element is present at the
+            // middle itself
+            if (data.get(mid) == value)
+                return mid;
+  
+            // If element is smaller than mid, then
+            // it can only be present in left subarray
+            if (data.get(mid) > value){
+             return binarySearchRecursive (lowIndex, mid - 1, value); 
+            }
+              
+            // Else the element can only be present
+            // in right subarray
+            return binarySearchRecursive ( mid + 1, highIndex, value);
+        }
+  
+        // // We reach here when element is not present
+        // // in array
+        return -1;
 	    
     }
     
